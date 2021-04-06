@@ -1,3 +1,3 @@
-npm i
-npm start
-http://localhost:5050/
+#npm i
+#npm start
+#http://localhost:5050/
