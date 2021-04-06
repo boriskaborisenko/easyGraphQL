@@ -5,13 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>easy graphql</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
 </head>
 <body>
     Hello
     <hr>
     open console
     <hr>
-    <div id="exampleRes"></div>
+    <pre id="exampleRes" style="background:#222222; color:darkcyan; font-family: 'Source Code Pro';"></pre>
     <script>
         fetch('http://localhost:5050/data')
         .then(response => {
@@ -19,7 +21,7 @@
         })
         .then(data => {
             console.log(data)
-            document.querySelector('#exampleRes').innerHTML = JSON.stringify(data)
+            document.querySelector('#exampleRes').innerHTML = JSON.stringify(data.data, undefined, 2)
         })
     </script>
 </body>
